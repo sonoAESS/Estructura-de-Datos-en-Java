@@ -6,7 +6,7 @@ package ejer1_pila_cola;
  */
 public class PilaSE<T> {
 
- /* Atributo Tope */
+    /* Atributo Tope */
  /* Almacena la direccion del nodo que contiene el elemento tope */
     protected NodoSE<T> top;
 

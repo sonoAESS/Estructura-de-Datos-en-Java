@@ -28,33 +28,33 @@ public class ColaSE<T> {
     public T Frente() //throws ExceptionColaVacia 
     {
         if (Vacia()) {
-            System.out.println("nada");//throw new ExceptionColaVacia();
+            throw new IllegalStateException("La cola esta vacia");
         } else {
             return frente.getInfo();
         }
-        return null;
     }
 
     public T Fondo() //throws ExceptionColaVacia 
     {
         if (Vacia()) {
-            System.out.println("nada");//throw new ExceptionColaVacia();
+            throw new IllegalStateException("La cola esta vacia");
         } else {
             return fondo.getInfo();
         }
-        return null;
     }
 
     public T Extraer() //throws ExceptionColaVacia 
     {
         if (Vacia()) {
-            System.out.println("nada");//throw new ExceptionColaVacia();
+            throw new IllegalStateException("La cola esta vacia");
         } else {
             NodoSE<T> cursor = frente;
             frente = frente.getSiguiente();
+            if(frente==null){
+                fondo=null;
+            }
             return cursor.getInfo();
         }
-        return null;
     }
 
     public boolean Vacia() {

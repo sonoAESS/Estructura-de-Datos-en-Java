@@ -21,16 +21,13 @@ public class PilaSE<T> {
     }
 
     public T Extraer() {
-        try {
             if (!Vacia()) {
                 T x = top.getInfo();
                 top = top.getSiguiente();
                 return x;
+            }else{
+                throw new IllegalStateException("La pila esta vacia");
             }
-        } catch (Exception e) {
-            System.out.println("Nada");;
-        }
-        return null;
     }
 
     public T Tope() {

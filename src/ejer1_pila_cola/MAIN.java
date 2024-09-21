@@ -46,21 +46,27 @@ public class MAIN {
         est.Adicionar(c);
         
         ColaSE <Persona> tra=new ColaSE<>();
-        est.Adicionar(d);
-        est.Adicionar(e);
-        est.Adicionar(f);
+        tra.Adicionar(d);
+        tra.Adicionar(e);
+        tra.Adicionar(f);
         
         Sistema sistema=new Sistema(tra,est);
         
+        System.out.println("\n Busqueda de estudiante 1:");
         System.out.println(sistema.BuscarEstudiante(1));
+        System.out.println("\n Estudiantes");
         sistema.ImprimirEst();
+        System.out.println("\n Trabajadores");
         sistema.ImprimirTra();
+        
         System.out.println("\n Cambios");
+        
         sistema.EliminarRepetidos();
-        System.out.println("Repetidos eliminados");
+        System.out.println("\n Repetidos eliminados");
         sistema.ImprimirEst();
+        
         sistema.CambiarSolapin();
-        System.out.println("Solapin cambiado");
+        System.out.println("\n Solapin cambiado");
         sistema.ImprimirEst();
 
     }

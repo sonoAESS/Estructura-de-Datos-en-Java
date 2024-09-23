@@ -3,6 +3,7 @@ package ejer1_pila_cola;
 /**
  *
  * @author Antonio
+ * @param <T>
  */
 public class PilaSE<T> {
 
@@ -16,7 +17,7 @@ public class PilaSE<T> {
     }
 
     public void Apilar(T x) {
-        NodoSE<T> nuevo = new NodoSE<T>(x, top);
+        NodoSE<T> nuevo = new NodoSE<>(x, top);
         top = nuevo;
     }
 

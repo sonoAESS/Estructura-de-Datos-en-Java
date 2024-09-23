@@ -3,6 +3,7 @@ package ejer1_pila_cola;
 /**
  *
  * @author Antonio
+ * @param <T>
  */
 public class ColaSE<T> {
 
@@ -15,7 +16,7 @@ public class ColaSE<T> {
     }
 
     public void Adicionar(T x) {
-        NodoSE<T> nuevo = new NodoSE<T>(x, null);
+        NodoSE<T> nuevo = new NodoSE<>(x, null);
         if (Vacia()) {
             frente = nuevo;
             fondo = nuevo;

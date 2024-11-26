@@ -1,5 +1,7 @@
 package ejer1_pila_cola;
 
+import ejer1_listase.NodoSE;
+
 /**
  *
  * @author Antonio

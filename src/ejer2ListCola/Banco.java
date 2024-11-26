@@ -12,6 +12,31 @@ import ejer1_pila_cola.ColaSE;
  *
  * @author Antonio
  */
+
+/*
+1. Una empresa de software pretende hacer un sistema que modele las funciones de un banco en forma muy 
+básica. El banco mantiene una lista de cuentas de ahorro, cada cuenta tiene: el número de identidad del 
+beneficiario, el saldo actual y el número la misma (un entero igual a su posición en la lista de cuentas).
+ Dentro de las funciones del banco está la de atender solicitudes de depósito. Las solicitudes se almacenan 
+en una cola para atenderlas todas de forma automática. Una solicitud de depósito tiene el número de 
+identidad del beneficiario, la cantidad de dinero a depositar y el nombre. Otras funcionalidades son: crear 
+nuevas cuentas de ahorro y dar de baja a clientes de cuentas de ahorro.
+
+a) Implemente la funcionalidad VerificarCuenta()de la clase Banco. Esta funcionalidad debe 
+tomar la 1era solicitud en espera y verificar, usando el número de identidad del beneficiario, si existe 
+una cuenta a su nombre; en caso de que exista la cuenta debe retornar su posición en la lista de 
+cuentas, si no existe debe crearla, agregarla a la lista de cuentas y retornar su posición. La cola de 
+solicitudes no debe modificarse.
+
+b) Implemente la funcionalidad AtenderTodasLasSolicitudes() de la clase Banco. Esta 
+funcionalidad debe atender todas las solicitudes (en el orden en que fueron hechas) y actualizar las 
+cuentas pertinentes con el nuevo depósito.
+
+c) Implemente la funcionalidad DarBajaAMillonarios() de la clase Banco. Esta funcionalidad 
+debe eliminar todas las cuentas cuyo saldo sea superior al millón de pesos y devolver una nueva lista 
+con esas cuentas.
+*/
+
 public class Banco {
     protected ListaSE <Cuenta> lCuentas;
     protected ColaSE <Solicitud> cSol;
